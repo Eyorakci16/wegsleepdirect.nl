@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--
+ _____                      _        _ _  __   
+| ____|   _  ___  _ __ __ _| | _____(_) |/ /_  
+|  _|| | | |/ _ \| '__/ _` | |/ / __| | | '_ \ 
+| |__| |_| | (_) | | | (_| |   < (__| | | (_) |
+|_____\__, |\___/|_|  \__,_|_|\_\___|_|_|\___/ 
+      |___/                                                                                         
+-->
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wegsleepdirect biedt snelle en betrouwbare pechhulp en autotransport in Europa.">
+    <meta name="keywords" content="Pechhulp, Autotransport, Sleepdienst, Wegslepen">
+    <meta name="author" content="Wegsleepdirect">
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Wegsleepdirect | Pechhulp & Sleepdienst">
+    <meta property="og:description" content="Wegsleepdirect biedt snelle en betrouwbare pechhulp en autotransport in Europa.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://www.wegsleepdirect.nl">
+    <meta property="og:type" content="website">
+
+    <title>Contact</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Wegsleepdirect Logo" loading="lazy">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Over ons</a></li>
+                <li class="services">
+                    <a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="pechhulp.html">Pechhulp</a></li>
+                        <li><a href="tweewielers.html">Tweewieler</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Contact Info (Hidden on Mobile, Replaced with Icons) -->
+            <div class="contact-info">
+                <a href="tel:+1234567890" class="desktop-contact">📞 +1 234 567 890</a>
+                <a href="mailto:info@example.com" class="desktop-contact">✉ info@example.com</a>
+                
+                <!-- Mobile Contact Icons -->
+                <div class="contact-icons">
+                    <a href="tel:+1234567890" aria-label="Call Us">📞</a>
+                    <a href="mailto:info@example.com" aria-label="Email Us">✉</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="hamburger" aria-label="Toggle Navigation" aria-expanded="false">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Contact Section -->
+    <main>
+        <section class="contact-details">
+            <h2>Direct Contact</h2>
+            <address>
+                <ul>
+                    <li><strong>Phone:</strong> <a href="tel:+123456789">+1 23456789</a></li>
+                    <li><strong>Reactietijd (E-mail):</strong> Binnen 1 werkdag</li>
+                    <li><strong>Email:</strong> <a href="mailto:info@wegsleepdirect.nl">info@wegsleepdirect.nl</a></li>
+                    <li><strong>Openingstijden:</strong> 24/7 beschikbaar voor noodgevallen. Standaard uren: Ma-Zo: 10:00 - 22:00</li>
+                </ul>
+            </address>
+        </section>
+    
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <h2>Contactformulier</h2>
+            <p>Vul het onderstaande formulier in en wij nemen zo snel mogelijk contact met u op.</p>
+        
+            <form action="contact.php" method="POST" class="contact-form" id="contact-form" aria-labelledby="contact-form-heading" novalidate>
+                <fieldset>
+                    <legend id="contact-form-heading">Fill in your details to get in touch</legend>
+            
+                    <!-- Name Field -->
+                    <label for="name">Naam <span>*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        placeholder="Your name" 
+                        aria-required="true">
+                    
+                    <!-- Email Field -->
+                    <label for="email">Email Address <span>*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="Your email address" 
+                        aria-required="true" 
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+                        title="Please enter a valid email address.">
+                    
+                    <!-- Phone Field -->
+                    <label for="phone">Telefoonnummer <span>*</span></label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        required 
+                        placeholder="Your phone number" 
+                        aria-required="true" 
+                        pattern="^\+?[0-9]*$" 
+                        title="Phone number (only numbers and +)">
+                    
+                    <!-- Subject Field -->
+                    <label for="subject">Onderwerp <span>*</span></label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        required 
+                        placeholder="Subject of your message" 
+                        aria-required="true">
+                    
+                    <!-- Message Field -->
+                    <label for="message">Vragen / Opmerkingen</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="6" 
+                        placeholder="Your message" 
+                        aria-placeholder="Enter your message here"></textarea>
+            
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit" 
+                        class="btn" 
+                        aria-label="Send Message">Bericht Verzenden</button>
+                </fieldset>
+            </form>            
+        
+            <div id="form-feedback" style="display:none;">
+                <p id="form-success" class="feedback success">Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.</p>
+                <p id="form-error" class="feedback error">Er is iets misgegaan. Probeer het alstublieft opnieuw.</p>
+            </div>
+        </section>        
+        
+        <!-- Google Map Embed (Moved Below the Contact Form) -->
+        <section class="contact-maps">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.631314196234!2d4.9041!3d52.3676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60ac2b99f913f%3A0xa052debfede26a9!2sWegsleepdirect!5e0!3m2!1sen!2snl!4v1670000000000!5m2!1sen!2snl" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    aria-label="Our Location on Google Maps">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Copyright in the center -->
+            <p class="footer-text">&copy; <span id="year"></span> Wegsleepdirect. Alle rechten voorbehouden.</p>
+        
+            <!-- Social Media Icons Fixed on the Right -->
+            <div class="social-media">
+                <a href="https://www.facebook.com/wegsleepdirect" target="_blank" aria-label="Facebook">
+                    <img src="icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/wegsleepdirect" target="_blank" aria-label="Instagram">
+                    <img src="icons/instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript to update the year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>    
+    
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Structured Data for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Wegsleepdirect",
+      "description": "Snelle en betrouwbare pechhulp en autotransport in Europa. 24/7 bereikbaar – Neem direct contact op!",
+      "url": "https://www.wegsleepdirect.nl",
+      "logo": "https://www.wegsleepdirect.nl/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Straatnaam 123",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1000 AA",
+        "addressCountry": "NL"
+      },
+      "telephone": "+31 6 12345678",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "$$",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.3676",
+        "longitude": "4.9041"
+      },
+      "sameAs": [
+        "https://www.facebook.com/wegsleepdirect",
+        "https://www.instagram.com/wegsleepdirect"
+      ]
+    }
+    </script>
+
+</body>
+</html>
