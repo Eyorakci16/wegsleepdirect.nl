@@ -1,0 +1,34 @@
+import random
+import shutil
+import time
+import os
+
+# Characters to display (Matrix-style)
+chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()"
+
+# Terminal width detection
+columns, _ = shutil.get_terminal_size()
+
+# Number of streams
+num_streams = columns // 2
+positions = [random.randint(0, columns - 1) for _ in range(num_streams)]
+
+def matrix_rain():
+    try:
+        while True:
+            line = [' ' for _ in range(columns)]
+            for i in range(num_streams):
+                char = random.choice(chars)
+                pos = positions[i]
+                line[pos] = char
+                # randomly move the stream left or right
+                positions[i] += random.choice([-1, 0, 1])
+                positions[i] = max(0, min(columns - 1, positions[i]))
+            print("\033[1;32m" + ''.join(line) + "\033[0m")
+            time.sleep(0.05)
+    except KeyboardInterrupt:
+        print("\nExiting Matrix...")
+
+if __name__ == "__main__":
+    os.system('cls' if os.name == 'nt' else 'clear')
+    matrix_rain()
